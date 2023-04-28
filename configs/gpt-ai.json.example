@@ -1,0 +1,14 @@
+{
+    "allowed_users": "*",
+    "max_history": "*",
+    "default_max_history": 10,
+    "role": "assistant",
+    "token": "*OPENAI_TOKEN*",
+    "model": "gpt-3.5-turbo",
+    "database": {
+        "settings": "chatgpt_settings",
+        "messages": "chatgpt_messages"
+    },
+    "init": "true",
+    "exclude": ["database"]
+}

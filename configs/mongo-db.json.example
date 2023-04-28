@@ -1,0 +1,5 @@
+{
+    "database": "assistant",
+    "host": "localhost",
+    "port": 27017
+}

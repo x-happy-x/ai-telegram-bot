@@ -1,0 +1,11 @@
+{
+    "allowed_users": "*",
+    "host": "localhost",
+    "port": "80",
+    "database": {
+        "settings": "sd_settings",
+        "commands": "sd_commands"
+    },
+    "init": "true",
+    "exclude": ["database"]
+}

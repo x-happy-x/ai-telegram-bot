@@ -1,0 +1,16 @@
+{
+    "class": "user",
+    "mode": null,
+    "database": {
+        "settings": "user_settings",
+        "messages": "messages",
+        "users": "users"
+    },
+    "personal": {
+        "*ADMIN_USER_ID*": {
+            "class": "admin"
+        }
+    },
+    "exclude": ["database", "personal"],
+    "init": "true"
+}
