@@ -31,8 +31,12 @@ class TelegramBot:
         self.dp = Dispatcher(self.bot, storage=self.storage)
 
         # Connect ChatGPT
-        self.gpt_config, self.gpt_settings = init(self.db_base, config=AIConfig(configs['gpt']))
-        self.chat = ChatGPT(self.gpt_config, self.db_base)
+        try:
+            self.gpt_config, self.gpt_settings = init(self.db_base, config=AIConfig(configs['gpt']))
+            self.chat = ChatGPT(self.gpt_config, self.db_base)
+        except pymongo.errors.ServerSelectionTimeoutError as e:
+            self.log("Не удалось подключиться к базе данных\n:"+str(e))
+            exit(1)
 
         # Connect StableDiffusion
         self.sd_config, self.sd_settings = init(self.db_base, config=AIConfig(configs['sd']))

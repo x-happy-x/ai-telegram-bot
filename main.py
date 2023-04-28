@@ -2,7 +2,7 @@ from utils.application import get_application
 import asyncio
 
 if __name__ == '__main__':
-    print("Sdasd")
+    print("Running")
     app = get_application(
         bot="telegram",
         gpt="chatgpt",
@@ -11,4 +11,4 @@ if __name__ == '__main__':
         users="users")
     from handlers import import_var
     app.start()
-    print("asdasd")
+    print("Stopped")

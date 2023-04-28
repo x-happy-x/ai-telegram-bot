@@ -1,5 +1,5 @@
 {
-    "allowed_users": "*",
+    "allowed_users": "*ALLOWED_USERS*",
     "host": "localhost",
     "port": "80",
     "database": {
