@@ -8,23 +8,32 @@ First you need to run the database, for example in [docker](https://docs.docker.
 ```
 docker run --name assistant-db -p 27017:27017 -d mongo:latest
 ```
-
-Next, clone the repository, configure the configs and run:
+Next we are cloning this repository
 ```
-# We are cloning this repository
 git clone https://github.com/x-happy-x/ai-telegram-bot.git
 cd ai-telegram-bot
-
-# Rename the configs so that they do not end with .example, but with .json at the end
+```
+Rename the configs so that they do not end with .example, but with .json at the end
+```
 mv .\configs\telegram-bot.json.example .\configs\telegram-bot.json
 mv .\configs\chatgpt-ai.json.example .\configs\chatgpt-ai.json
 mv .\configs\stable-diffusion-ai.json.example .\configs\stable-diffusion-ai.json
 mv .\configs\mongo-db.json.example .\configs\mongo-db.json
 mv .\configs\users.json.example .\configs\users.json
+```
+And manually open each config file, fill in the data between `*...*`,
+and the rest at your discretion.
 
-# Manually open each config file, fill in the data between ...,
-# and the rest at your discretion
-
-# Launching the bot
-python ./main.py
+Or edit `.env` file and run:
+```
+python configure.py
+```
+Setting environment
+```
+pip install poetry
+poetry install
+```
+Launching the bot
+```
+poetry run python main.py
 ```
