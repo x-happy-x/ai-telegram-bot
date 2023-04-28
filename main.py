@@ -5,7 +5,7 @@ if __name__ == '__main__':
     print("Sdasd")
     app = get_application(
         bot="telegram",
-        gpt="openai",
+        gpt="chatgpt",
         sd="stable-diffusion",
         db="mongo",
         users="users")
