@@ -13,6 +13,11 @@ Next we are cloning this repository
 git clone https://github.com/x-happy-x/ai-telegram-bot.git
 cd ai-telegram-bot
 ```
+Setting environment
+```
+pip install poetry
+poetry install
+```
 Rename the configs so that they do not end with .example, but with .json at the end
 ```
 mv .\configs\telegram-bot.json.example .\configs\telegram-bot.json
@@ -26,12 +31,7 @@ and the rest at your discretion.
 
 Or edit `.env` file and run:
 ```
-python configure.py
-```
-Setting environment
-```
-pip install poetry
-poetry install
+poetry run python configure.py
 ```
 Launching the bot
 ```
