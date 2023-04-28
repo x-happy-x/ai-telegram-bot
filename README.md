@@ -13,6 +13,7 @@ Next, clone the repository, configure the configs and run:
 ```
 # We are cloning this repository
 git clone https://github.com/x-happy-x/ai-telegram-bot.git
+cd ai-telegram-bot
 
 # Rename the configs so that they do not end with .example, but with .json at the end
 mv .\configs\telegram-bot.json.example .\configs\telegram-bot.json
