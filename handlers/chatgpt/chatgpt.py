@@ -91,7 +91,7 @@ async def send_message(message: types.Message):
                     except exceptions.CantParseEntities:
                         await message.answer(msg_text[x:x + 4095], parse_mode=types.ParseMode.MARKDOWN)
                 except exceptions.CantParseEntities:
-                    await message.answer(msg_text[x:x + 4095], parse_mode=types.ParseMode.MARKDOWN_V2)
+                    await message.answer(escape_md(msg_text[x:x + 4095]), parse_mode=types.ParseMode.MARKDOWN_V2)
         else:
             await message.answer("*Возникла проблема:* ```" + answer["content"] + "```", parse_mode=types.ParseMode.MARKDOWN_V2)
     except Exception as e:

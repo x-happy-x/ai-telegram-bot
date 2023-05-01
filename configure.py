@@ -13,6 +13,6 @@ for file in os.listdir("./configs"):
         data = f.read()
     for option in ENV_OPTIONS:
         value = os.getenv(option)
-        data = data.replace(option, value)
+        data = data.replace(f"*{option}*", value)
     with open(f"./configs/{file}", "w") as f:
         f.write(data)
